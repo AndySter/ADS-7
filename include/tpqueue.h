@@ -25,7 +25,8 @@ class TPQueue {
     T pop() {
       if (head) {
         ITEM* temp = head -> next;
-        temp -> prev = temp ? nullptr : ;
+        if (temp)
+        temp -> prev = nullptr;
         T value = head -> value;
         delete head;
         head = temp;
