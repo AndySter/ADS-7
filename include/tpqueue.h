@@ -35,7 +35,7 @@ class TPQueue {
         throw std::string("Empty");
       }
     }
-    T push(const T& value) {
+    void push(const T& value) {
       ITEM* temp = head;
       ITEM* item = create(value);
       while (temp && temp -> value.prior >= value.prior)
