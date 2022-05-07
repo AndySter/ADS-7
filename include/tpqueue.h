@@ -40,22 +40,22 @@ class TPQueue {
       while (temp && temp -> value.prior >= value.prior)
       temp = temp -> next;
       if (!temp && head) {
-        tail -> next = item; 
+        tail -> next = item;
         tail -> next -> prev = tail;
         tail = item;
       } else if (!temp && !head) {
         head = tail = item;
       } else if (!temp -> prev) {
-        temp -> prev = item; 
+        temp -> prev = item;
         item -> next = temp;
         head = item;
       } else {
         temp -> prev -> next = item;
         item -> prev = temp -> prev;
         item -> next = temp;
-        temp -> prev = item; 
+        temp -> prev = item;
       }
-    } 
+    }
 };
 
 struct SYM {
