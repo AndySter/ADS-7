@@ -20,7 +20,7 @@ class TPQueue {
   }
   ITEM* head;
   ITEM* tail;
- 
+
  public:
     T pop() {
       if (head) {
