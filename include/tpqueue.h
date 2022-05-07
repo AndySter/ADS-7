@@ -4,7 +4,7 @@
 
 template<typename T>
 class TPQueue {
-  private:
+   private:
     struct ITEM {
       T value;
       ITEM* next;
@@ -19,8 +19,7 @@ class TPQueue {
   }
   ITEM* head;
   ITEM* tail;
-  
-  public:
+   public:
     T pop() {
       if (head) {
         ITEM* temp = head -> next;
@@ -33,7 +32,6 @@ class TPQueue {
         throw std::string("Empty");
       }
     }
-    
     T push(const T& value) {
       ITEM* temp = head;
       ITEM* item = create(value);
